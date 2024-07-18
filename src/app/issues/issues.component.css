@@ -1,0 +1,51 @@
+.retro-heading {
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 2.5rem; 
+    text-align: center; 
+    margin-top: 40px;
+  }
+
+.issue-filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .button-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .issues-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .issue-card {
+    margin-bottom: 20px;
+  }
+  
+  .mat-card-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .mat-card-content p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .mat-mdc-card-title, .mat-mdc-card-subtitle {
+    display: block;
+    margin: 0;
+    background: whitesmoke;
+    padding: 10px 0 10px 21px;
+}
+
+.issue-filter-container button {
+    margin-bottom: 20px;
+  }
+  

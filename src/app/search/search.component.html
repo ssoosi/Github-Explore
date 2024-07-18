@@ -1,0 +1,24 @@
+
+<h1 class="retro-heading">GitHub Explorer</h1>
+<div class="search-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Search Repositories</mat-label>
+      <input matInput (keyup.enter)="searchRepositories()" [(ngModel)]="searchTerm">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="searchRepositories()" [disabled]="isLoading">
+      <span *ngIf="!isLoading">Search</span>
+      <mat-spinner *ngIf="isLoading" diameter="20" color="accent"></mat-spinner>
+    </button>
+  
+    <div *ngIf="repositories">
+      <mat-card *ngFor="let repo of repositories.items">
+        <mat-card-title>{{ repo.full_name }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ repo.description }}</p>
+          <p>⭐ {{ repo.stargazers_count }} | 🍴 {{ repo.forks_count }}</p>
+          <button mat-button [routerLink]="['/repository', repo.owner.login, repo.name]">View Details</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

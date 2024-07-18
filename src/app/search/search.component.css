@@ -1,0 +1,41 @@
+body{
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+.retro-heading {
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 2.5rem; 
+    text-align: center; 
+    margin-top: 40px;
+  }
+  
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80%; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .search-container mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .search-container button {
+    margin-top: 10px;
+  }
+  
+  .search-container mat-card {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .mat-mdc-card-title, .mat-mdc-card-subtitle{
+    font-family: "Bungee Shade", sans-serif;
+    padding: 10px 0 10px 15px;
+    background: whitesmoke;
+  }

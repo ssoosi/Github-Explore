@@ -1,0 +1,14 @@
+<h1 class="retro-heading">Repositories Details</h1>
+<div *ngIf="repository" class="repository-details">
+    <h2 class="repository-title">{{ repository.full_name }}</h2>
+    <p class="repository-description">{{ repository.description }}</p>
+    <p class="repository-stats">
+      ⭐ {{ repository.stargazers_count }} | 🍴 {{ repository.forks_count }}
+    </p>
+    <p class="repository-issues">
+      Open Issues: {{ repository.open_issues_count }}
+    </p>
+    <a [href]="repository.html_url" target="_blank" class="repository-link">View on GitHub</a>
+    <button mat-raised-button color="primary" [routerLink]="['/repository', repository.owner.login, repository.name, 'issues']">View Issues</button>
+  </div>
+  

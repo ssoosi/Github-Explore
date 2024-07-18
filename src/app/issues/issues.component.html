@@ -1,0 +1,20 @@
+<h1 class="retro-heading">Repositories Issues</h1>
+<div class="issue-filter-container">
+    <button mat-raised-button color="default" [routerLink]="['/']">Back to Home</button>
+    
+    <div class="button-group">
+      <button mat-raised-button color="primary" (click)="filterIssues('all')">All</button>
+      <button mat-raised-button color="accent" (click)="filterIssues('open')">Open</button>
+      <button mat-raised-button color="warn" (click)="filterIssues('closed')">Closed</button>
+    </div>
+  
+    <div *ngIf="issues" class="issues-list">
+      <mat-card *ngFor="let issue of issues" class="issue-card">
+        <mat-card-title>{{ issue.title }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ issue.body }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  ß
